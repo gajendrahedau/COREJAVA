@@ -1,0 +1,82 @@
+<html>
+<head>
+<title> window example </title>
+</head>
+<script>
+var m;
+function nwindow()
+{
+var w=document.getElementById("width1").value;
+var h=document.getElementById("height1").value;
+var l=document.getElementById("left1").value;
+var t=document.getElementById("top1").value;
+if(w=="" || h=="" || l=="" || t=="")
+	m=window.open('','mydow','width=100,height=100');
+else
+m=window.open('','mydow','height=h,width=w,left=l,top=t,resizable=yes');
+m.document.write("The window is opened on clicking of the <b>New Windwow</b> button");
+/*TODO: get the height, width, left and top from the form object and pass the values to open
+method of window along with the name of the html file to be opened in the new window.*/
+}
+</script>
+<body >
+<form id="frmlab">
+<table border="1" cellspacing="8" cellpadding="10" bordercolor="blue">
+<tr>
+<th colspan="4" align="center">Create a new window</th>
+</tr>
+<tr>
+<td colspan="4" align="center">Window Size</td>
+</tr>
+<tr>
+<td>Width:</td>
+<td><input type="text" name="width1" id="width1"></td>
+<td>Height</td>
+<td><input type="text" name="height1" id="height1"></td>
+</tr>
+<tr>
+<td colspan="4" align="center">POSITION</td>
+</tr>
+<tr>
+<td>Left:</td>
+<td><input type="text" name="left1" id="left1"></td>
+<td>Top</td>
+<td><input type="text" name="top1" id="top1"></td>
+</tr>
+<tr>
+<td colspan="3"><button value="New Window" name="nwinodw" onClick="nwindow() ">New Window</button></td>
+<td><input type="reset" value="Reset"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+order details-
+407-0734168-8976321
+
+
+
+
+
+
+
+
+
+
+
+
+

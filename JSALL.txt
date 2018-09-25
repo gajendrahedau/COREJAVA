@@ -1,0 +1,590 @@
+
+<!--lab3 prob1.html   -->
+
+<html>
+<head>
+<title>Date Object</title>
+</head>
+<body>
+<script>
+var d=new Date();
+document.write(d.toString().split(' ')[0]+' '+d.toString().split(' ')[1]+' '+d.toString().split(' ')[2]+' '+d.toString().split(' ')[4]+' '+' '+d.toString().split(' ')[3]);
+if(d.getHours()<12)
+{
+	document.write("<br>Good Morning");
+}
+else if(d.getHours()>=12 && d.getHours()<=17)
+{
+	document.write("<br>Good Afternoon");
+}
+else
+	document.write("<br>Good Evening");
+</script>
+</body>
+</html>
+
+<!--lab3 prob2.html   -->
+
+
+<html>
+<head>
+<title>Date Object</title>
+</head>
+<body>
+<script>
+document.write("The actual string is &nbsp"+"                   -         "+"Capgemini"+"<br>");
+document.write("The character to be searched for is"+"          -         "+"p<br>");
+var s="Capgemini";
+var r=s.indexOf("p");
+document.write("The character is found at the index"+"          -                   "+r);
+</script>
+</body>
+</html>
+
+
+<!--lab3 prob3.html   -->
+
+
+
+<html>
+<head>
+<title>Date Object</title>
+</head>
+<body>
+<script>
+var str="University of Capgemini";
+document.write("String is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;"+str);
+var r=str.match("Capgemini");
+document.write("<br>Result of str.match('Capgemini') &nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;"+r);
+var r1=str.substr(3,6);
+document.write("<br>Result of str.substr(3,6) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;"+r1);
+</script>
+</body>
+</html>
+
+
+
+<!--lab4 prob1.html   -->
+
+
+<html>
+<head>
+<title>Date Object</title>
+</head>
+<body>
+<script>
+var a=new Array("Gajendra","Atul","Manisha","Ashutosh","Anureet","Aprajita");
+document.write("List of Employees");
+document.write("<br>-------------------------<br>");
+for(var i=0;i<a.length;i++)
+{
+	document.write((i+1)+". "+a[i]+"<br>");
+}
+</script>
+</body>
+</html>
+
+
+<!--lab5 prob1.html   -->
+
+
+<html>
+<head>
+<title> window example </title>
+</head>
+<script>
+var m;
+function nwindow()
+{
+var w=document.getElementById("width1").value;
+var h=document.getElementById("height1").value;
+var l=document.getElementById("left1").value;
+var t=document.getElementById("top1").value;
+if(w=="" || h=="" || l=="" || t=="")
+	m=window.open('','mydow','width=100,height=100');
+else
+m=window.open('','mydow','height=h,width=w,left=l,top=t,resizable=yes');
+m.document.write("The window is opened on clicking of the <b>New Windwow</b> button");
+/*TODO: get the height, width, left and top from the form object and pass the values to open
+method of window along with the name of the html file to be opened in the new window.*/
+}
+</script>
+<body >
+<form id="frmlab">
+<table border="1" cellspacing="8" cellpadding="10" bordercolor="blue">
+<tr>
+<th colspan="4" align="center">Create a new window</th>
+</tr>
+<tr>
+<td colspan="4" align="center">Window Size</td>
+</tr>
+<tr>
+<td>Width:</td>
+<td><input type="text" name="width1" id="width1"></td>
+<td>Height</td>
+<td><input type="text" name="height1" id="height1"></td>
+</tr>
+<tr>
+<td colspan="4" align="center">POSITION</td>
+</tr>
+<tr>
+<td>Left:</td>
+<td><input type="text" name="left1" id="left1"></td>
+<td>Top</td>
+<td><input type="text" name="top1" id="top1"></td>
+</tr>
+<tr>
+<td colspan="3"><button value="New Window" name="nwinodw" onClick="nwindow() ">New Window</button></td>
+<td><input type="reset" value="Reset"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
+
+
+<!--lab6 prob1.html   -->
+
+
+<html>
+<head>
+<title>Date Object</title>
+</head>
+<body>
+<table border="1" bordercolor="blue">
+<tr>
+<th colspan="2">Location object properties</th>
+</tr>
+<tr>
+<td>href</td>
+<td id="a"></td>
+</tr>
+<tr>
+<td>pathname</td>
+<td id="b"></td>
+</tr>
+<tr>
+<td>protocol</td>
+<td id="c"></td>
+</tr>
+</table>
+<script>
+document.getElementById("a").innerHTML =window.location.href;
+document.getElementById("b").innerHTML =window.location.pathname;
+document.getElementById("c").innerHTML =window.location.protocol;
+</script>
+</body>
+</html>
+
+
+
+<!--lab7 prob1.html   -->
+
+<html>
+<head>
+<title>Date Object</title>
+</head>
+<body bgcolor="blue">
+<h1>PRODUCTS </h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Price</th>
+<th>Qty</th>
+</tr>
+
+<tr>
+<td>Barbie Doll</td>
+<td>Beautiful</td>
+<td>20</td>
+<td><input type="text" name="barbie" id="barbie"></td>
+</tr>
+
+
+<tr>
+<td>Calculator</td>
+<td>Calculator with latest features</td>
+<td>30</td>
+<td><input type="text" name="cal" id="cal"></td>
+</tr>
+
+<tr>
+<td>Mobile Phone</td>
+<td>Camera,Java,Games,GPRS</td>
+<td>40</td>
+<td><input type="text" name="mobile" id="mobile"></td>
+</tr>
+
+<tr>
+<td>LG DVD</td>
+<td>5 disc changer</td>
+<td>50</td>
+<td><input type="text" name="disc" id="disc"></td>
+</tr>
+
+<tr>
+<td><input type="button" name="order" value="ORDER" id="order" onClick="order();"></td>
+</tr>
+</table>
+
+<script>
+function order(){
+	var c=document.getElementById("cal").value;
+	var m=document.getElementById("mobile").value;
+	var b=document.getElementById("barbie").value;
+	var d=document.getElementById("disc").value;
+	if(c=="" && m=="" && b==""&& d=="")
+	{
+		alert("no item selected");
+	}
+	else if(c!="")
+	{
+		my=open('','hello','width=500,height=500');
+		my.document.write("<html><head><title>Invoice</title></head><body><h1 align='center'>INVOICE</h1><br>");
+		my.document.write("<form><table align='center' border='1'><tr><th>PRODUCT</th><th>QUANTITY</th><th>PRICE</th><th>TOTAL</th></tr><tr><td>Calculator</td><td id='z'></td><td>30</td><td id='z1'></td></tr></table></form></body></html>");
+		my.document.getElementById("z").innerHTML=c;
+		my.document.getElementById("z1").innerHTML=(c*30);
+	}
+	else if(m!="")
+	{
+		my=open('','hello','width=500,height=500');
+		my.document.write("<html><head><title>Invoice</title></head><body><h1 align='center'>INVOICE</h1><br>");
+		my.document.write("<form><table align='center' border='1'><tr><th>PRODUCT</th><th>QUANTITY</th><th>PRICE</th><th>TOTAL</th></tr><tr><td>Mobile Phone</td><td id='p'></td><td>40</td><td id='p1'></td></tr></table></form></body></html>");
+		my.document.getElementById("p").innerHTML=m;
+		my.document.getElementById("p1").innerHTML=(m*40);
+	}
+	else if(b!="")
+	{
+		my=open('','hello','width=500,height=500');
+		my.document.write("<html><head><title>Invoice</title></head><body><h1 align='center'>INVOICE</h1><br>");
+		my.document.write("<form><table align='center' border='1'><tr><th>PRODUCT</th><th>QUANTITY</th><th>PRICE</th><th>TOTAL</th></tr><tr><td>Barbie Doll</td><td id='l'></td><td>20</td><td id='l1'></td></tr></table></form></body></html>");
+		my.document.getElementById("l").innerHTML=b;
+		my.document.getElementById("l1").innerHTML=(b*20);
+	}
+	else if(d!="")
+	{
+		my=open('','hello','width=500,height=500');
+		my.document.write("<html><head><title>Invoice</title></head><body><h1 align='center'>INVOICE</h1><br>");
+		my.document.write("<form><table align='center' border='1'><tr><th>PRODUCT</th><th>QUANTITY</th><th>PRICE</th><th>TOTAL</th></tr><tr><td>LG DVD</td><td id='x'></td><td>50</td><td id='x1'></td></tr></table></form></body></html>");
+		my.document.getElementById("x").innerHTML=d;
+		my.document.getElementById("x1").innerHTML=(d*50);
+	}
+}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!--lab8 prob1.html   -->
+
+
+<html>
+<head>
+<title>Date Object</title>
+</head>
+<body>
+<h1>Enter Loan Information:</h1>
+<table>
+<tr>
+<td>1) Amount of the loan (any currency):</td>
+<td><input type="text" name="amount" id="amount" pattern="[1-9]{1}[0-9]{6}"></td>
+</tr>
+
+<tr>
+<td>2) Annual percentage rate of interest:</td>
+<td><input type="text" name="interest" id="interest"></td>
+</tr>
+
+<tr>
+<td>3) Repayment period in years:</td>
+<td><input type="text" name="time" id="time"></td>
+</tr>
+
+<tr>
+<td><input type="submit" value="Compute" onClick="calculatePayment();"></td>
+</tr>
+</table>
+
+<h1>Payment Information:</h1>
+<table>
+<tr>
+<td>4) Your monthly payment will be:</td>
+<td><input type="text" name="x" id="x" disabled></td>
+</tr>
+
+<tr>
+<td>5) Your total payment will be:</td>
+<td><input type="text" name="y" id="y" disabled></td>
+</tr>
+
+<tr>
+<td>6) Your total interest payments will be:</td>
+<td><input type="text" name="z" id="z" disabled></td>
+</tr>
+
+</table>
+
+<script>
+function calculatePayment()
+{
+	var t=parseInt(document.getElementById("time").value);
+	var i=parseInt(document.getElementById("interest").value);
+	var a=parseInt(document.getElementById("amount").value);
+	if(t<7 || t>15)
+	{
+			document.getElementById("time").value="Invalid Period";
+			document.getElementById("x").value="";
+			document.getElementById("y").value="";
+			document.getElementById("z").value="";
+	}
+	else if(a<=0 || a>1500000)
+	{
+			document.getElementById("amount").value="Invalid Amount";
+			document.getElementById("x").value="";
+			document.getElementById("y").value="";
+			document.getElementById("z").value="";
+	}
+	else
+	{
+		var ti=((a*t*i)/100);
+	var s=ti+a;
+	var m=((a*i)/(12*100));
+	
+	document.getElementById("x").value=m;
+	document.getElementById("y").value=s;
+	document.getElementById("z").value=ti;
+	}
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--   lab8 prob2.html                       -->
+
+
+<html>
+<head>
+<title>Date Object</title>
+</head>
+<body>
+<table>
+
+<tr>
+<th>Category:<th>
+<td>
+<select name="first" id="first" onchange="f()">
+<option value="1" >Electronics</option>
+<option value="2">Grocery</option>
+</select>
+<td>
+</tr>
+
+<tr>
+<th>Product:<th>
+<td id="in">
+<select name="first" id="first">
+<option value="20000">Television</option>
+<option value="30000">Laptop</option>
+<option value="10000">Phone</option>
+</select>
+<td>
+</tr>
+
+<tr>
+<th>Quantity:<th>
+<td><input type="text" name="q" id="q"><td>
+</tr>
+
+<tr>
+<th>Total Price:<th>
+<td><input type="text" name="total" id="toal" disabled><td>
+</tr>
+
+
+<tr>
+<td><input type="submit" name="submit" value="Submit"><td>
+<td><input type="reset" name="clear" value="Clear"><td>
+</tr>
+
+
+</table>
+<script>
+function f()
+{
+		if(document.getElementById("first").value==2)
+		{
+			
+		}
+}
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head><title>H1</title></head>
+<body>
+<h1 style="color:red">This is Sales department located at Mumbai</h1>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head><title>H2</title></head>
+<body>
+<h1 style="color:yellow">This is Training department located at Pune</h1>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head><title>H3</title></head>
+<body>
+<h1 style="color:blue">This is Accounts department located at Chennai</h1>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+<table border="1" align="center">
+
+<tr>
+<th>Empcode</th>
+<th>Emp Name</th>
+<th>Dept Code</th>
+<th>Experience</th>
+</tr>
+
+<tr>
+<td>1001</td>
+<td>Kiran Rao</td>
+<td><a href="Href1.html" target="_blank">10</a></td>
+<td>8 Yrs.</td>
+</tr>
+
+<tr>
+<td>1002</td>
+<td>Aamir Khan</td>
+<td><a href="Href2.html" target="_blank">20</a></td>
+<td>10 Yrs.</td>
+</tr>
+
+<tr>
+<td>1003</td>
+<td>Ishita SHah</td>
+<td><a href="Href3.html" target="_blank">30</a></td>
+<td>15 Yrs.</td>
+</tr>
+
+</table>
+</body>
+</html>
