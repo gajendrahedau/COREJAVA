@@ -1,0 +1,312 @@
+An entity object  when it is persisted to the database via an EntityManager's persist method which must be 
+invoked within an active transaction, represents which of the given state of the Persistence Life Cycle?
+1). Managed State
+2). Detached State
+3). Transient state
+4). Removed State
+Solution :
+option [1] is correct
+Attempted :
+option [1] is attempted
+
+
+
+As per JPA 2 recommendations, Query interface shoule be used in which of the following case?
+1). When specific query result type is expected
+2). When query result type is unknown
+3). When query result contains more than one object
+4). When query result contains only one object
+Solution :
+option [2] is correct
+Attempted :
+option [3] is attempted
+
+
+ Which of the following are benefits of ORM?
+1). Granularity
+2). Maintainability
+3). Performance
+4). Vendor independence
+Solution :
+option [2,3,4] are correct
+Attempted :
+option [1,2,3,4] are attempted
+
+
+What is true about following JSP code snippet?
+
+<% if (Math.random() < 0.5) { %>
+Have a <B>nice</B> day!
+<% } else { %>
+Have a <B>lousy</B> day!
+<% } %>
+1). Compilation error as interleaved scriptlet tags are not allowed
+2). Compilation error as we can not have more than 1 scriptlet tag in a JSP file
+3). It will always go in else block as Math.random() will generate numbers between 1 to 100
+4). If random number is less than 0.5 then it will produce "Have a nice day!" 
+Else it will produce "Have a lousy day!"
+Solution :
+option [4] is correct
+Attempted :
+option [1] is attempted
+
+
+
+
+ What is wrong with the given code?
+
+<%
+if(strPassword.equals("boss"))
+{
+<jsp:forward page="Welcome.jsp" flush="true"/>
+}
+else
+{
+<jsp:forward page="Login.jsp" flush="true"/>
+}
+%>
+1). unmatched brackets in if statement
+2). flush attribute must be false
+3). In <jsp:forward> keyword file should be used instead of page
+4). Actions can not be used within scriptlet block
+Solution :
+option [4] is correct
+Attempted :
+option [3] is attempted
+
+
+ode for error.jsp
+
+index.jsp
+<%@ page errorPage="error.jsp"%>
+<%!
+String []arr = {"google", "Capgemini"};
+%>
+<% 
+for(int i=0;i<=2;i++)
+    out.println(arr[i].length());
+%>
+
+What will be the output after execution of index.jsp?
+1). 5 9
+2). 5 9 followed by exception
+3). control will directly go to error page
+4). no output
+Solution :
+option [3] is correct
+Attempted :
+option [2] is attempted
+
+
+Consider the following code snippet:
+
+<%@ page import="oracle.jdbc.driver.OracleDriver"%> // Line 1
+<%@ page import="java.util.*java.sql.*" %> // Line 2
+
+Choose the correct option.
+1). Error at line 1. Can not import specific Class
+2). Error at line 2. Can not import all classes using *
+3). Error at line 2. Multiple directive tags  < %@ page % >  are not allowed
+4). No Error in JSP
+Solution :
+option [4] is correct
+Attempted :
+option [3] is attempted
+
+
+
+Content type for the response can be specified by using ____________ .
+1). HttpServletResponse.setContentType(String); 
+2). ServletResponse.setMIMEType(String); 
+3). HttpServletResponse.setHeader("Content-Type", "text/html");
+4). HttpServletResponse.setHeader("MIME-Type", "text/html"); 
+5). Option 1 & 3 both are correct
+Solution :
+option [1] is correct
+Attempted :
+option [5] is attempted
+
+
+
+Consider, following code snippet in a servlet- Servlet1:
+
+     HttpSession session=request.getSession(true);
+
+Another servlet Servlet 2 with following code snippet:
+
+     HttpSession session=request.getSession(false); out.print("Is it new session?" + session.isNew()) ; 
+
+If you use "forward" from Servlet 1 to Servlet 2 then what will it result into?
+1). Is it new session? true
+2). Is it new session? false
+3). Compilation error as getSession can not have "false" as argument
+4). none of the above
+Solution :
+option [1] is correct
+Attempted :
+option [2] is attempted
+
+ Which of the following  is not a valid method of HttpServletRequest?
+1). getParameter()
+2). setParameter()
+3). getAttribute()
+4). setAttribute()
+Solution :
+option [2] is correct
+Attempted :
+option [2] is attempted
+
+
+ Choose the appropriate statement for RequestDispatcher.
+1). It provides facility to dispatch the request to another resource like htmlservlet, jsp.
+2). getRequestDispatcher() method of ServletRequest interface  returns the object of RequestDispatcher.
+3). It provides two methods forward and include for request dispatching.
+4). This interface cannot be used to include the content of another resource.
+Solution :
+option [1,2,3] are correct
+Attempted :
+option [1,2,3,4] are attempted
+
+
+Which of the below listed  status code signifies the request was not completed or the server may have 
+met an unexpected condition?
+1). 400
+2). 200
+3). 500
+4). 300
+Solution :
+option [3] is correct
+Attempted :
+option [1] is attempted
+
+
+ Which of the given statement is true?
+1). @WebServlet annotation affirms annotated class as servlet and holds metadata about declared servlet
+2). The urlPatterns attribute is a mandatory attribute of @WebServlet that specifies the URL pattern that invokes this servlet.
+3). Deployment descriptor is optional if we use @WebServlet annotation
+4). All the above are true
+Solution :
+option [4] is correct
+Attempted :
+option [1] is attempted
+
+
+
+What are the different ways to terminate session?
+1). HttpSession.invalidate()
+2). Set a time-out period using HttpSession.setMaxInactiveInterval(int)
+3). Set a time-out period in web.xml
+4). Set a time-out period using HttpSession.setMaxAge(int)
+Solution :
+option [1,2,3] are correct
+Attempted :
+option [3,4] are attempted
+
+
+@WebServlet("/my-address")
+public class MyServlet extends HttpServlet { ... }
+
+Choose the correct URL.
+1). http://hostname/Context -name/my-address
+
+2). http://hostname/my-address
+
+3). http://Context- name/my-address
+
+4). http://hostname/Context- name
+
+Solution :
+option [1] is correct
+Attempted :
+option [2] is attempted
+
+
+ <html>
+<form action="ShowServlet" method="POST">
+<input type="hidden" name="user" value="John"/>
+<input type="submit" value="submit"/>
+</form>
+</html>
+
+public class ShowServlet extends HttpServlet
+{
+    public void doPost(HttpServletRequest req, HttpServletResponse res)throws IOException
+{
+String user = request.getParameter("user"); 
+PrintWriter out = response.getWriter();//line 2
+out.println("user = "+user);
+}
+}
+
+What will be the output?
+1). It will print user = John
+2). exception will be generated
+3). compilation error
+4). It will print user=null
+Solution :
+option [1] is correct
+Attempted :
+option [4] is attempted
+
+
+@WebServlet("/my-address")
+public class MyServlet extends HttpServlet { ... }
+
+Choose the correct URL.
+1). http://hostname/Context -name/my-address
+
+2). http://hostname/my-address
+
+3). http://Context- name/my-address
+
+4). http://hostname/Context- name
+
+Solution :
+option [1] is correct
+Attempted :
+option [2] is attempted
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
